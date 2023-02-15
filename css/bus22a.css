@@ -1,0 +1,26 @@
+.online_574{
+    width: 450px;
+    height: 350px;
+}
+.bus-22a{
+    display: flex;
+    flex-direction: row;
+}
+.rasp{
+    width: 350px;
+    height: 750px;
+}
+/* .rasp body > h1:nth-child(3){
+    color: red;
+} */
+@media screen and (max-width:768px) {
+    .online_574{
+        width: 350px;
+        height: 350px;
+    }
+    .bus-22a{
+        display: flex;
+        flex-direction:column;
+        gap: 10px;
+    }
+}
