@@ -1,3 +1,7 @@
+document.getElementById('myIframe').addEventListener('click', function(){
+  document.querySelector('.button1').contentWindow.location.reload(true);
+  
+})
 const url = 'http://businfo82.ru/wap/rasp/?rd=1677272400&mr_id=574&rl_racetype=65&st_id=25&rc_kkp=B';
 const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 const tableSelector = 'table';
