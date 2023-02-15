@@ -3,8 +3,10 @@
     height: 350px;
 }
 .bus-22a{
+    padding: 20px 0px;
     display: flex;
     flex-direction: row;
+    gap: 20px;
 }
 .rasp{
     width: 350px;

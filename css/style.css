@@ -18,7 +18,11 @@ body{
     flex-direction: row;
     justify-content: center;
 } */
-
+@media screen and(max-width:1400px) {
+    .navbar-nav , #navbarNavDropdown{
+        align-items: center;
+    }
+}
 @media screen and (min-width: 1024px){
     .navbar-nav , #navbarNavDropdown{
         display: flex;
@@ -34,6 +38,7 @@ body{
         align-items: center;
     }
 }
+
 section{
     /* background-color: mediumaquamarine; */
     border-radius: 15px;

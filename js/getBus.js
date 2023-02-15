@@ -1,20 +1,54 @@
+const url = 'http://businfo82.ru/wap/rasp/?rd=1677272400&mr_id=574&rl_racetype=65&st_id=25&rc_kkp=B';
+const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+const tableSelector = 'table';
+
+fetch(proxyUrl + url)
+  .then(response => response.text())
+  .then(data => {
+    const parser = new DOMParser();
+    const htmlDoc = parser.parseFromString(data, 'text/html');
+    const table = htmlDoc.querySelector(tableSelector);
+    const rows = table.querySelectorAll('tr');
+    rows.forEach(row => {
+      const cells = row.querySelectorAll('td');
+      cells.forEach(cell => {
+        cell.style.color = 'red';
+      });
+    });
+  })
+  .catch(error => console.log(error));
+
+  const iframe = document.getElementById("myIframe");
+  const iframeWindow = iframe.contentWindow;
+
+  iframe.addEventListener("load", function() {
+    const iframeBody = iframeWindow.document.body;
+    const allElements = iframeBody.getElementsByTagName("*");
+
+    for(let i = 0; i < allElements.length; i++) {
+      allElements[i].style.color = "red";
+    }
+  });
+
+
+
 // Добавление css файла в IFRAME
-window.onload = () => {
-  // создаём новый тег "script" для JSONP
-  let jsonpScript = document.createElement("script");
-  jsonpScript.src = "../css/frame.css?callback=loadCss";
-  document.body.appendChild(jsonpScript);
-}
+// function changeTableTextColor(data) {
+//   var iframe = document.getElementById('myIframe');
+//   var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+//   var table = innerDoc.getElementsByTagName('table');
+//   var rows = table.getElementsByTagName('tr');
+//   for (var i = 0; i < rows.length; i++) {
+//     var cells = rows[i].getElementsByTagName('td');
+//     for (var j = 0; j < cells.length; j++) {
+//       cells[j].style.color = 'red';
+//     }
+//   }
+// }
 
-// создаем функцию, которая будет вызвана после загрузки JSONP-скрипта  
-function loadCss(response) {
-  // создаём новый тег "style" и заполняем его содержимым полученным из JSONP
-  let iframeStyle = document.createElement("style");
-  iframeStyle.innerHTML = response.css;
-
-  // вставляем стили в [1] - индекс iframe
-  frames[1].document.head.appendChild(iframeStyle);
-}
+// var script = document.createElement('script');
+// script.src = 'http://businfo82.ru/wap/rasp/?rd=1677272400&mr_id=574&rl_racetype=65&st_id=25&rc_kkp=B?callback=changeTableTextColor';
+// document.body.appendChild(script);
 
 // const url = 'https://businfo82.ru/wap/online/?mr_id=574&rl_racetype=65';
 
