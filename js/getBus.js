@@ -6,7 +6,7 @@ window.onload = () => {
   document.body.appendChild(jsonpScript);
 }
 
-// создаем функцию, которая будет вызвана после загрузки JSONP-скрипта
+// создаем функцию, которая будет вызвана после загрузки JSONP-скрипта  
 function loadCss(response) {
   // создаём новый тег "style" и заполняем его содержимым полученным из JSONP
   let iframeStyle = document.createElement("style");
