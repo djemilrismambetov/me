@@ -1,10 +1,10 @@
 body{
-    background-color: honeydew;
+    color: aliceblue;
 }
 .container{
     max-width: 1399px;
     margin: 0 auto;
-    /* background-color: honeydew; */
+    background-color: honeydew;
 }
 .navbar-bg{
     background-color: mediumaquamarine;

@@ -10,32 +10,43 @@ for (el of items){
 }
 window.location.reload();
 };
+console.log('Ширина экрана вашего браузера ' + window.innerWidth + ' px');
 
 
-const TableWork = document.getElementById('FrameWork')
-const TableWeek = document.getElementById('FrameWeek')
-const TableOnline = document.getElementById('FrameOnline')
-const BtnWork = document.getElementById('btnradio1')
-const BtnWeek = document.getElementById('btnradio2')
-const BtnOnline = document.getElementById('btnradio3')
 
+const TableWork = document.getElementById('FrameWork');
+const TableWeek = document.getElementById('FrameWeek');
+const TableOnline = document.getElementById('FrameOnline');
+const BtnWork = document.getElementById('btnradio1');
+const BtnWeek = document.getElementById('btnradio2');
+const BtnOnline = document.getElementById('btnradio3');
 
-BtnWork.onclick = function(){
-  TableOnline.classList.add("hidden")
-  TableWeek.classList.add("hidden")
-  TableWork.classList.remove("hidden")
-  
+if (window.innerWidth < 1399) {
+ 
+
+  BtnWork.onclick = function(){
+    TableOnline.classList.add("hidden");
+    TableWeek.classList.add("hidden");
+    TableWork.classList.remove("hidden");
+  };
+
+  BtnWeek.onclick = function(){
+    TableWork.classList.add("hidden");
+    TableWeek.classList.remove("hidden");
+    TableOnline.classList.add("hidden");
+  };
+
+  BtnOnline.onclick = function(){
+    TableWork.classList.add("hidden");
+    TableWeek.classList.add("hidden");
+    TableOnline.classList.remove("hidden");
+  };
 }
 
-BtnWeek.onclick = function(){
-  TableWork.classList.add("hidden")
-  TableWeek.classList.remove("hidden")
-  TableOnline.classList.add("hidden")
-}
-BtnOnline.onclick = function(){
-  TableWork.classList.add("hidden")
-  TableWeek.classList.add("hidden")
-  TableOnline.classList.remove("hidden")
+else {
+  TableWeek.classList.remove("hidden");
+  TableOnline.classList.remove("hidden");
+  TableWork.classList.remove("hidden");
 }
 
 
