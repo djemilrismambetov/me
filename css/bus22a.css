@@ -1,6 +1,6 @@
 .online_574{
     width: 450px;
-    height: 350px;
+    height: 355px;
 }
 .bus-22a{
     padding: 20px 0px;
@@ -10,7 +10,7 @@
 }
 .rasp{
     width: 350px;
-    height: 550px;
+    height: 570px;
 }
 /* .rasp body > h1:nth-child(3){
     color: red;
@@ -18,7 +18,7 @@
 @media screen and (max-width:768px) {
     .online_574{
         width: 351px;
-        height: 351px;
+        height: 380px;
     }
     .bus-22a{
         display: flex;
