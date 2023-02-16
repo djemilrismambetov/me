@@ -1,11 +1,18 @@
-.navbar{
+.navbar>.container-fluid{
     display: none;
 }
 .online_574{
     max-width: 450px;
     height: 420px;
 }
-
+.header-title{
+    text-align: center;
+    display: flex;
+    width: 1399px;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
 .bus-22a{
     padding: 20px 0px;
     display: flex;
@@ -32,7 +39,7 @@ iframe{
     border-radius: 20px;
 }
 .button1{
-    margin: 20px 0px;
+    margin: 10px 0px;
     padding: 0px 0px;
     width: 150px;
     height: 50px;
@@ -51,8 +58,11 @@ iframe{
     display: none;
 }
 @media screen and (max-width: 1399px) {
+    /* *{
+        color: aqua !important;
+    } */
     .bus-22a{
-        padding: 20px 0px;
+        padding: 5px 0px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -64,9 +74,16 @@ iframe{
         display: flex;
         vertical-align: top;
         justify-content: center;
+        padding-bottom: 2px;
     }
 }
 @media screen and (max-width:768px) {
+    .frames{
+        padding-top: 0px;
+        margin-top: -11px;
+        /* border: 1px black solid; */
+        border-radius: 20px solid;
+    }
     .online_574{
         width: 351px;
         
