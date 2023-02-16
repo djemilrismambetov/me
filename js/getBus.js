@@ -1,46 +1,77 @@
-document.getElementById('myIframe').addEventListener('click', function(){
+document.getElementById('FrameOnline').addEventListener('click', function(){
   document.querySelector('.button1').contentWindow.location.reload(true);
   
 })
-var items = document.getElementsByClassName('MyIframe');
+var items = document.getElementsByClassName('FrameOnline');
 const ButtonReload = document.getElementById('UpdateButton')
 ButtonReload.onclick = function(){
 for (el of items){
 	el.src = el.src;
 }
 window.location.reload();
+};
+
+
+const TableWork = document.getElementById('FrameWork')
+const TableWeek = document.getElementById('FrameWeek')
+const TableOnline = document.getElementById('FrameOnline')
+const BtnWork = document.getElementById('btnradio1')
+const BtnWeek = document.getElementById('btnradio2')
+const BtnOnline = document.getElementById('btnradio3')
+
+
+BtnWork.onclick = function(){
+  TableOnline.classList.add("hidden")
+  TableWeek.classList.add("hidden")
+  TableWork.classList.remove("hidden")
+  
 }
-const url = 'http://businfo82.ru/wap/rasp/?rd=1677272400&mr_id=574&rl_racetype=65&st_id=25&rc_kkp=B';
-const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-const tableSelector = 'table';
 
-fetch(proxyUrl + url)
-  .then(response => response.text())
-  .then(data => {
-    const parser = new DOMParser();
-    const htmlDoc = parser.parseFromString(data, 'text/html');
-    const table = htmlDoc.querySelector(tableSelector);
-    const rows = table.querySelectorAll('tr');
-    rows.forEach(row => {
-      const cells = row.querySelectorAll('td');
-      cells.forEach(cell => {
-        cell.style.color = 'red';
-      });
-    });
-  })
-  .catch(error => console.log(error));
+BtnWeek.onclick = function(){
+  TableWork.classList.add("hidden")
+  TableWeek.classList.remove("hidden")
+  TableOnline.classList.add("hidden")
+}
+BtnOnline.onclick = function(){
+  TableWork.classList.add("hidden")
+  TableWeek.classList.add("hidden")
+  TableOnline.classList.remove("hidden")
+}
 
-  const iframe = document.getElementById("myIframe");
-  const iframeWindow = iframe.contentWindow;
 
-  iframe.addEventListener("load", function() {
-    const iframeBody = iframeWindow.document.body;
-    const allElements = iframeBody.getElementsByTagName("*");
 
-    for(let i = 0; i < allElements.length; i++) {
-      allElements[i].style.color = "red";
-    }
-  });
+
+// const url = 'http://businfo82.ru/wap/rasp/?rd=1677272400&mr_id=574&rl_racetype=65&st_id=25&rc_kkp=B';
+// const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+// const tableSelector = 'table';
+
+// fetch(proxyUrl + url)
+//   .then(response => response.text())
+//   .then(data => {
+//     const parser = new DOMParser();
+//     const htmlDoc = parser.parseFromString(data, 'text/html');
+//     const table = htmlDoc.querySelector(tableSelector);
+//     const rows = table.querySelectorAll('tr');
+//     rows.forEach(row => {
+//       const cells = row.querySelectorAll('td');
+//       cells.forEach(cell => {
+//         cell.style.color = 'red';
+//       });
+//     });
+//   })
+//   .catch(error => console.log(error));
+
+  // const iframe = document.getElementById("myIframe");
+  // const iframeWindow = iframe.contentWindow;
+
+  // iframe.addEventListener("load", function() {
+  //   const iframeBody = iframeWindow.document.body;
+  //   const allElements = iframeBody.getElementsByTagName("*");
+
+  //   for(let i = 0; i < allElements.length; i++) {
+  //     allElements[i].style.color = "red";
+  //   }
+  // });
 
 
 
