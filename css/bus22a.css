@@ -24,22 +24,23 @@
 }
 .rasp{
     max-width: 350px;
-    height: 650px;
+    height: 640px;
 }
-.frames{
+/* .frames{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 25px;
     align-items: stretch;
     align-content: stretch;
-}
+} */
 iframe{
-    padding: 20px 0px;
-    border-radius: 20px;
+    padding: 0px 0px;
+    border-radius: 10px;
+    /* text-align: center; */
 }
 .button1{
-    margin: 10px 0px;
+    margin: 5px 0px;
     padding: 0px 0px;
     width: 150px;
     height: 50px;
