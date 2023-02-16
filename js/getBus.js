@@ -2,6 +2,14 @@ document.getElementById('myIframe').addEventListener('click', function(){
   document.querySelector('.button1').contentWindow.location.reload(true);
   
 })
+var items = document.getElementsByClassName('MyIframe');
+const ButtonReload = document.getElementById('UpdateButton')
+ButtonReload.onclick = function(){
+for (el of items){
+	el.src = el.src;
+}
+window.location.reload();
+}
 const url = 'http://businfo82.ru/wap/rasp/?rd=1677272400&mr_id=574&rl_racetype=65&st_id=25&rc_kkp=B';
 const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 const tableSelector = 'table';
