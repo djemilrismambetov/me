@@ -98,11 +98,11 @@ iframe{
     }
     .online_574{
         width: 450px;
-        height: 320px;
+        height: 390px;
     }
     .rasp{
         width: 450px;
-        height: 850px;
+        height: 630px;
     }
 }
 @media screen and (max-width: 1799px) {
@@ -131,6 +131,25 @@ iframe{
     .button1{
         width: 200px;
         height: 50px;
+    }
+}
+@media screen and (max-width:1700px){
+    .container{
+        max-width: 1500px;
+    }
+    .rasp{
+        width: 450px;
+        height: 1040px;
+    }
+    .online_574{
+        width: 450px;
+        height: 700px;
+    }
+  
+}
+@media screen and (min-width:1399px) {
+    .btn-group{
+        display: none;
     }
 }
 @media screen and (max-width:768px) {

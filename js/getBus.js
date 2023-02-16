@@ -20,6 +20,7 @@ const TableOnline = document.getElementById('FrameOnline');
 const BtnWork = document.getElementById('btnradio1');
 const BtnWeek = document.getElementById('btnradio2');
 const BtnOnline = document.getElementById('btnradio3');
+const BtnGrp = document.getElementById('btn-group');
 
 if (window.innerWidth < 1399) {
  
@@ -47,6 +48,7 @@ else {
   TableWeek.classList.remove("hidden");
   TableOnline.classList.remove("hidden");
   TableWork.classList.remove("hidden");
+  BtnGrp.classList.add("hidden");
 }
 
 
