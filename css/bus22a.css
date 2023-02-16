@@ -1,10 +1,7 @@
 .navbar>.container-fluid{
     display: none;
 }
-.online_574{
-    max-width: 450px;
-    height: 420px;
-}
+
 .header-title{
     text-align: center;
     display: flex;
@@ -22,18 +19,23 @@
     justify-content: space-around;
     gap: 20px; */
 }
-.rasp{
-    max-width: 350px;
-    height: 640px;
+
+.online_574{
+    width: 550px;
+    height: 420px;
 }
-/* .frames{
+.rasp{
+    width: 500px;
+    height: 950px;
+}
+.frames{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 25px;
-    align-items: stretch;
-    align-content: stretch;
-} */
+    /* align-items: stretch;
+    align-content: stretch; */
+}
 iframe{
     padding: 0px 0px;
     border-radius: 10px;
@@ -58,7 +60,52 @@ iframe{
 .btn-group{
     display: none;
 }
-@media screen and (max-width: 1399px) {
+@media screen and (min-width: 1900px) {
+    .container{
+        max-width: 2190px;
+    }
+    .header-title{
+        width: 2190px;
+    }
+    .button1{
+        margin: 5px 0px;
+        padding: 0px 0px;
+        width: 250px;
+        height: 100px;
+        background-color: yellowgreen;
+        border: 1px black solid;
+        border-radius: 20px;
+    }
+    .online_574{
+        width: 450px;
+        height: 400px;
+    }
+    .rasp{
+        width: 450px;
+        height: 750px;
+    }
+
+}
+@media screen and (max-width: 1920px){
+    .button1{
+        margin: 5px 0px;
+        padding: 0px 0px;
+        width: 150px;
+        height: 50px;
+        background-color: yellowgreen;
+        border: 1px black solid;
+        border-radius: 20px;
+    }
+    .online_574{
+        width: 450px;
+        height: 320px;
+    }
+    .rasp{
+        width: 450px;
+        height: 850px;
+    }
+}
+@media screen and (max-width: 1799px) {
     /* *{
         color: aqua !important;
     } */
@@ -77,6 +124,14 @@ iframe{
         justify-content: center;
         padding-bottom: 2px;
     }
+    .rasp{
+        width: 250px;
+        height: 640px;
+    }
+    .button1{
+        width: 200px;
+        height: 50px;
+    }
 }
 @media screen and (max-width:768px) {
     .frames{
@@ -87,7 +142,7 @@ iframe{
     }
     .online_574{
         width: 351px;
-        
+        height: 400px;
     }
     .bus-22a{
         display: flex;
@@ -95,6 +150,10 @@ iframe{
         gap: 10px;
         justify-content: center;
         align-items: center;
+    }
+    .rasp{
+        width: 290px;
+        height: 650px;
     }
     .button1{
         width: 150px;

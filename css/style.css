@@ -29,13 +29,19 @@ section{
     /* background-color: mediumaquamarine; */
     border-radius: 15px;
 }
+footer{
+    background-color: black;
+    opacity: 0.5;
+}
 footer .container{
+    opacity: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     /* max-height: 95px; */
     gap: 5px;
+    color: white;
 }
 .social-contacts{
     display: flex;
@@ -47,6 +53,7 @@ footer .container{
 .social-contacts img{
     width: 50px;
     height: 50px;
+    filter: invert(100%);
 }
 
 @media screen and(max-width:1400px) {
