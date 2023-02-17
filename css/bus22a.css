@@ -47,11 +47,10 @@ iframe{
     justify-content: center;
     max-width: 40%;
     align-items: center;
+    margin: 10px 0px;
 }
-.btn-reload:hover,*:hover{
-    background-color: initial;
-    border:none;
-    text-decoration: 1px solid white;
+.btn-reload:hover{
+    ba
 }
 
 .btn-reload img{

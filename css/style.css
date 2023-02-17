@@ -30,9 +30,9 @@ section{
     /* background-color: mediumaquamarine; */
     border-radius: 15px;
 }
-
 footer .container{
     background-color: rgba(128, 128, 128,0.1);
+    border-radius: 25px;
     opacity: 1;
     display: flex;
     flex-direction: column;
