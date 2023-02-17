@@ -88,7 +88,11 @@
                 <div class="spinner-border text-primary hidden" role="status">
                   <span class="visually-hidden hidden">Loading...</span>
                 </div>
-                <input id="UpdateButton" class="btn btn-primary button1" type="reset" value="Перезагрузить"> <button class="button1 hidden" id="UpdateButton">Перезагрузить</button>
+                <div class="btn-reload">
+                  <!-- <img src="" alt="refresh icon"> -->
+                  <input id="UpdateButton" class="btn btn-primary" type="reset" value="Перезагрузить"> 
+                  <button class="button1 hidden" id="UpdateButton">Перезагрузить</button>
+                </div>
                 <div id="btn-group" class="btn-group" role="group" aria-label="Basic radio toggle button group">
                   <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
                   <label class="btn btn-outline-primary" for="btnradio1">Будни</label>
@@ -102,9 +106,9 @@
                 </div>
                 
                 <div class="frames">
-                  <iframe id="FrameOnline" seamless src="https://businfo82.ru/wap/online/?mr_id=574&rl_racetype=65" class="online_574 hidden"></iframe> 
-                  <iframe id="FrameWork" seamless src="https://businfo82.ru/wap/rasp/?rd=1676926800&mr_id=574&rl_racetype=65&st_id=25&rc_kkp=B" class="rasp" frameborder="0"></iframe>
-                  <iframe id="FrameWeek" seamless src="https://businfo82.ru/wap/rasp/?rd=1677272400&mr_id=574&rl_racetype=65&st_id=25&rc_kkp=B" class="weekend-rasp rasp hidden"  frameborder="0"></iframe>
+                  <iframe id="FrameOnline" seamless src="https://businfo82.ru/wap/online/?mr_id=574&rl_racetype=65" class="online_574 hidden">ОШИБКА</iframe> 
+                  <iframe id="FrameWork" seamless src="https://businfo82.ru/wap/rasp/?rd=1676926800&mr_id=574&rl_racetype=65&st_id=25&rc_kkp=B" class="rasp" frameborder="0">ОШИБКА</iframe>
+                  <iframe id="FrameWeek" seamless src="https://businfo82.ru/wap/rasp/?rd=1677272400&mr_id=574&rl_racetype=65&st_id=25&rc_kkp=B" class="weekend-rasp rasp hidden"  frameborder="0">ОШИБКА</iframe>
                 </div>
               </div>
             </div>
@@ -115,7 +119,7 @@
         <div class="container">
           <p>Обратная связь</p>
           <div class="social-contacts">
-            <a href="https://t.me/DhemchikBot"><img src="../assets/img/icons/tg.png" alt="telegram icon"></a>
+            <a href="https://t.me/DhemchikBot"><img src="../assets/img/icons/tabler-icons-2.4.0/png/brand-telegram.png" alt="telegram icon"></a>
             <a href="mailto:jemil1.2004@mail.ru"><img src="../assets/img/icons/mail2.png" alt="mail icon"></a>
           </div>
           <div class="footer-copyright">
