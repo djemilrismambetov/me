@@ -49,10 +49,18 @@ iframe{
     align-items: center;
     margin: 10px 0px;
 }
-.btn-reload:hover{
+/* .btn-reload:hover{
     ba
+} */
+.btn-reload .button1{
+    background-color:transparent;
+    border: none;
+    /* text-decoration: solid 1px white; */
 }
-
+.btn-reload .button1:hover{
+    text-decoration: 1px underline white;
+    font
+}
 .btn-reload img{
     max-width:25px;
     max-height: 25px;
