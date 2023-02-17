@@ -1,141 +1,95 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../assets/img/icons/favicon.ico" type="image/x-icon">
-    <title>Расписание 22А | Трекинг</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="../assets/img/icons/favicon.ico" type="image/x-icon">
+	<title>Расписание 22А | Трекинг</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/bus22a.css"> </head>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/bus22a.css">
-</head>
 <body>
-    <header>
-        <div class="container">
-        <!-- <table>
-            <tr>
-               <td><a href="http://djemchik.ddns.net:443">Спидтест</a></li></td> 
-               <td><a href="http://djemchik.ddns.net:51821">Панель управления приватным VPN конфигуратором</a></td>
-               <td><a href="">Проекты по МУПК</a></td>
-               <td><a href="http://djemchik.ddns.net:2004">Панель упраления домашним роутером</a></td>
-            </tr>
-        </table> -->
-        <!-- <nav> -->
-            <!-- <ul> -->
-                <!-- <li><a href="http://djemchik.ddns.net:443">Спидтест</a></li> -->
-                <!-- <li><a href="http://djemchik.ddns.net:51821">Панель управления приватным VPN конфигуратором</a></li> -->
-                <!-- <li><a href="">Проекты по МУПК</a></li> -->
-                <!-- <li><a href="http://djemchik.ddns.net:2004">Панель упраления домашним роутером</a></li> -->
-            <!-- </ul> -->
-        <!-- </nav> -->
-        <nav class="navbar navbar-expand-lg navbar-bg">
-            <div class="container-fluid">
-              <a class="navbar-brand hidden" href="../index.html">Сайт Джемиля</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../index.html">Домашний</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="http://djemchik.ddns.net:2004">Панель управления роутером</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="http://djemchik.ddns.net:443">Спидтест до моего домашнего сервера</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/djemilrismambetov?tab=repositories">Проекты по МУПК</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://www.youtube.com/playlist?list=PLOAFzRws139CoGX2UvsGx5yWplrxBB6Hh">Мой плейлист на ютубе</a>
-                  </li>
-                  <li class="nav-item hidden">
-                    <a class="nav-link" href="http://NAN">NaN</a>
-                  </li>
-                  <li class="nav-item hidden">
-                    <a class="nav-link" href="http://NAN">NaN</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Разработка
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="../php/GetBus.php">Папка с PHP</a></li>
-                      <li><a class="dropdown-item" href="../html/bus22a.html">Another action</a></li>
-                      <li><a class="dropdown-item hidden" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="header-title">
-              <h2>Расписание автобусного маршрута 549-23(22А)</h2>
-            </div>
-          </nav>
-        </div>
-    </header>
-    <!-- <hr> -->
-    <main>
-        <section>
-            <div class="container">
-              <table id="bus-table"></table>
-              <div class="bus-22a">
-                <div class="spinner-border text-primary hidden" role="status">
-                  <span class="visually-hidden hidden">Loading...</span>
-                </div>
-                <div class="btn btn-primary btn-reload" type="reset" id="UpdateButton">
-                  <!-- <img src="" alt="refresh icon"> -->
-                  <input id="UpdateButton" class="btn btn-primary hidden" type="reset" value="Перезагрузить"> 
-                  <button class="btn btn-primary button1" id="UpdateButton" type="reset">Перезагрузить</button>
-                  <img src="../assets/img/icons/tabler-icons-2.4.0/png/refresh.png" alt="refresh png">
-                </div>
-                <div id="btn-group" class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                  <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                  <label class="btn btn-outline-primary" for="btnradio1">Будни</label>
-                
-                  <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                  <label class="btn btn-outline-primary" for="btnradio2">Выходной</label>
-                  
-                  <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                  <label class="btn btn-outline-primary" for="btnradio3">Онлайн</label>
-                
-                </div>
-                
-                <div class="frames">
-                  <iframe id="FrameOnline" seamless src="https://businfo82.ru/wap/online/?mr_id=574&rl_racetype=65" class="online_574 hidden">ОШИБКА</iframe> 
-                  <iframe id="FrameWork" seamless src="https://businfo82.ru/wap/rasp/?rd=1676926800&mr_id=574&rl_racetype=65&st_id=25&rc_kkp=B" class="rasp" frameborder="0">ОШИБКА</iframe>
-                  <iframe id="FrameWeek" seamless src="https://businfo82.ru/wap/rasp/?rd=1677272400&mr_id=574&rl_racetype=65&st_id=25&rc_kkp=B" class="weekend-rasp rasp hidden"  frameborder="0">ОШИБКА</iframe>
-                </div>
-              </div>
-            </div>
-        </section>
-    </main>
-    <!-- <hr> -->
-    <footer>
-        <div class="container">
-          <p>Обратная связь</p>
-          <div class="social-contacts">
-            
-            <a href="https://t.me/DhemchikBot"><img class="icon-tabler" src="../assets/img/icons/tabler-icons-2.4.0/svg/brand-telegram.svg" alt="telegram icon"></img></a>
-            <a href="mailto:jemil1.2004@mail.ru"><img src="../assets/img/icons/tabler-icons-2.4.0/png/mail.png" alt="mail icon"></a>
-          </div>
-          <div class="footer-copyright">
-            <p> ©Djemchik </p>
-          </div>
-      </div>
-    </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script> -->
-<!-- <script src="../cherrio/lib/cheerio.js"></script> -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
-<script src="https://github.com/github/fetch/releases/download/v3.6.0/fetch.umd.js"></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script> -->
-<script src="../js/script.js"></script>
-<script src="../js/getBus.js"></script>
+	<header>
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-bg">
+				<div class="container-fluid"> <a class="navbar-brand hidden" href="../index.html">Сайт Джемиля</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+					<div class="collapse navbar-collapse" id="navbarNavDropdown">
+						<ul class="navbar-nav">
+							<li class="nav-item"> <a class="nav-link active" aria-current="page" href="../index.html">Домашний</a> </li>
+							<li class="nav-item"> <a class="nav-link" href="http://djemchik.ddns.net:2004">Панель управления роутером</a> </li>
+							<li class="nav-item"> <a class="nav-link" href="http://djemchik.ddns.net:443">Спидтест до моего домашнего сервера</a> </li>
+							<li class="nav-item"> <a class="nav-link" href="https://github.com/djemilrismambetov?tab=repositories">Проекты по МУПК</a> </li>
+							<li class="nav-item"> <a class="nav-link" href="https://www.youtube.com/playlist?list=PLOAFzRws139CoGX2UvsGx5yWplrxBB6Hh">Мой плейлист на ютубе</a> </li>
+							<li class="nav-item hidden"> <a class="nav-link" href="http://NAN">NaN</a> </li>
+							<li class="nav-item hidden"> <a class="nav-link" href="http://NAN">NaN</a> </li>
+							<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Разработка</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="../php/GetBus.php">Папка с PHP</a></li>
+									<li><a class="dropdown-item" href="../html/bus22a.html">Another action</a></li>
+									<li><a class="dropdown-item hidden" href="#">Something else here</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="header-title">
+					<h2>Расписание автобусного маршрута 549-23(22А)</h2> </div>
+			</nav>
+		</div>
+	</header>
+	<!-- <hr> -->
+	<main>
+		<section>
+			<div class="container">
+				<table id="bus-table"></table>
+				<div class="bus-22a">
+					<div class="spinner-border text-primary hidden" role="status"> <span class="visually-hidden hidden">Loading...</span> </div>
+					<div class="btn btn-primary btn-reload" type="reset" id="UpdateButton">
+						<!-- <img src="" alt="refresh icon"> -->
+						<input id="UpdateButton" class="btn btn-primary hidden" type="reset" value="Перезагрузить">
+						<button class="btn btn-primary button1" id="UpdateButton" type="reset">Перезагрузить</button> <img src="../assets/img/icons/tabler-icons-2.4.0/png/refresh.png" alt="refresh png"> </div>
+					<div id="btn-group" class="btn-group" role="group" aria-label="Basic radio toggle button group">
+						<input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+						<label class="btn btn-outline-primary" for="btnradio1">Будни</label>
+						<input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+						<label class="btn btn-outline-primary" for="btnradio2">Выходной</label>
+						<input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+						<label class="btn btn-outline-primary" for="btnradio3">Онлайн</label>
+					</div>
+					<div class="frames">
+						<iframe id="FrameOnline" seamless src="https://businfo82.ru/wap/online/?mr_id=574&rl_racetype=65" class="online_574 hidden">ОШИБКА</iframe>
+						<iframe id="FrameWork" seamless src="https://businfo82.ru/wap/rasp/?rd=1676926800&mr_id=574&rl_racetype=65&st_id=25&rc_kkp=B" class="rasp" frameborder="0">ОШИБКА</iframe>
+						<iframe id="FrameWeek" seamless src="https://businfo82.ru/wap/rasp/?rd=1677272400&mr_id=574&rl_racetype=65&st_id=25&rc_kkp=B" class="weekend-rasp rasp hidden" frameborder="0">ОШИБКА</iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<!-- <hr> -->
+	<footer>
+		<div class="container">
+			<p>Обратная связь</p>
+			<div class="social-contacts">
+				<a href="https://t.me/DhemchikBot"><img class="icon-tabler" src="../assets/img/icons/tabler-icons-2.4.0/svg/brand-telegram.svg" alt="telegram icon"></a>
+				<a href="mailto:jemil1.2004@mail.ru"><img src="../assets/img/icons/tabler-icons-2.4.0/png/mail.png" alt="mail icon"></a>
+			</div>
+			<div class="footer-copyright">
+				<p> ©Djemchik </p>
+			</div>
+		</div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script> -->
+	<!-- <script src="../cherrio/lib/cheerio.js"></script> -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+	<script src="https://github.com/github/fetch/releases/download/v3.6.0/fetch.umd.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script> -->
+	<script src="../js/script.js"></script>
+	<script src="../js/getBus.js"></script>
 </body>
+
 </html>
