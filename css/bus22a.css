@@ -48,11 +48,12 @@ iframe{
     max-width: 40%;
     align-items: center;
 }
-.button1:hover{
+.btn-reload:hover,*:hover{
     background-color: initial;
     border:none;
     text-decoration: 1px solid white;
 }
+
 .btn-reload img{
     max-width:25px;
     max-height: 25px;
