@@ -59,11 +59,11 @@ iframe{
 }
 .btn-reload .button1:hover{
     text-decoration: 1px underline white;
-    font
+    /* font */
 }
 .btn-reload img{
     max-width:25px;
-    max-height: 25px;
+    max-height:25px;
 }
 .btn-group{
     display: none;
