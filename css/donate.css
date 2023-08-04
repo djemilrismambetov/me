@@ -1,14 +1,25 @@
 main section h2{
    text-align: center;
+   font-size: 32px;
+}
+main{
+    margin: 10px 0px;
 }
 .donate-flex{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.donate-item{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .donate-yoomoney button{
     padding-left: 48px;
     padding-right: 48px;
     background-color: #6703fc;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    
     cursor: pointer;
     outline: 0;
     border: 0;
@@ -16,6 +27,9 @@ main section h2{
     border-radius: 20px;
     max-width: 330px; 
     height: 50px;
+}
+.donate-yoomoney button:hover{
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 .donate-yoomoney button img{
     width:30px;
@@ -30,4 +44,7 @@ main section h2{
     align-items: center;
     gap: 5px;
     
+}
+.donate-donationalerts img{
+    width:100px;
 }
