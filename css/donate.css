@@ -14,6 +14,7 @@ main{
     display: flex;
     align-items: center;
     flex-direction: column;
+    gap: 5px;
 }
 .donate-yoomoney button{
     padding-left: 48px;
@@ -34,7 +35,7 @@ main{
 .donate-yoomoney button img{
     width:30px;
 }
-.donate-yoomoney button a{
+button a{
     color: white;
     font-size: 20px;
     text-decoration: none;
@@ -47,4 +48,17 @@ main{
 }
 .donate-donationalerts img{
     width:100px;
+}
+.donate-donationalerts button{ 
+    padding-left: 48px;
+    padding-right: 48px;
+    background-color: #0f051fea;
+    
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    margin: 0;
+    border-radius: 20px;
+    max-width: 330px; 
+    height: 50px;
 }
